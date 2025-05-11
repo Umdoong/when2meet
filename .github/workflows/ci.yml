@@ -57,7 +57,7 @@ jobs:
           path: ~/.local/
 
       - name: Install Poetry
-        if: step.cache-poetry.outputs.cache-hit != 'true # action의 결과는 outputs에 저장됨
+        if: step.cache-poetry.outputs.cache-hit != 'true' # action의 결과는 outputs에 저장됨
         run: |
           curl -sSL https://install.python-poetry.org | python3 - --version 1.8.5
 
